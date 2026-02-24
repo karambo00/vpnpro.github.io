@@ -1,27 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Политика конфиденциальности OgonVPN - обработка персональных данных пользователей">
+    <title>Политика конфиденциальности | OgonVPN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Vkus Music Privacy Policy</title>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
 
-<h1>Privacy Policy</h1>
-<p><em>Last Revised: Dec 17, 2024</em></p>
-<p>Vkus Music is committed to protecting its Users privacy. The following Privacy Policy outlines the information Vkus Music(&ldquo;Vkus Music&rdquo;, &quot;we&quot;, or &quot;us&quot;) may process and how we may use that information to better serve visitors and Users while using our Application (&ldquo;Application&rdquo;). Please review the following carefully so that you understand our privacy practices.</p>
-<p>If you have questions about this Privacy Policy, please contact us at <a href="mailto:vkusmusic@gmail.com">vkusmusic@gmail.com</a></p>
-<h2>Definitions</h2>
-<p>&quot;<strong>User</strong>&quot; means a person who has installed Vkus Music application<br />
-<h2>Privacy Policy</h2>
-<p>Application is using vk.com public API available at <a href="https://vk.com/dev">https://vk.com/dev</a>. By using the Application you agree to comply with vk.com Privacy Policy (<a href="https://vk.com/privacy">https://vk.com/privacy</a>)</p>
-<h2>Purposes for processing your personal data</h2>
-<h3>Technical and functional management of the Application</h3>
-<p>When you use our Application, we process technical data such as your IP-address, or Device ID, and  information about the manufacturer, model, and operating system of your mobile  device. We use this data to enable us to deliver the functionalities of the Application,  resolve technical difficulties, provide you with the correct and most up to  date version of the Application and to improve the function of the Application.</p>
-<h3>Personal Information</h3>
-<p>Application is never store your vk.com credentials. We do store temporary token to access vk.com API. User can always rewoke access VK Vkus Music application to the vk.com profile at <a href="https://vk.com/apps">https://vk.com/apps</a>.
-<h2>Caching</h2>
-<p>Application is using local caching to provide best user experience. Information is stored securely in local phone memory. By accepting this Privacy Policy you understand that this information could be obtained at the Android devices with root access.</p>
-<h2>Security</h2>
-<p>Vkus Music has taken appropriate technical and organizational security measures against loss or unlawful  processing of your personal data. To this purpose, your personal data are securely stored within our database, and we use standard, industry-wide, commercially reasonable security practices.</p>
-<p>However, as effective as encryption technology is, no security system is impenetrable. We cannot guarantee the security of our database, nor can we guarantee that information  you supply won't be intercepted while being transmitted to us over the Internet. Any transmission of information by you to Vkus Music is at your own risk.</p>
-<h2>Changes in this Privacy Policy</h2>
-<p>We may update this privacy  statement to reflect changes to our information practices. If we make any  material changes we will notify you prior to the change becoming effective. We  encourage you to periodically review this page for the latest information on  our privacy practices.</p>
-<h2>Contact Vkus Music</h2>
-<p>If you have any questions about these Privacy Policy or our Application, please contact Vkus Music at&nbsp;<a href="mailto:vkusmusic@gmail.com">vkusmusic@gmail.com</a></p>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .important-notice {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+
+        .important-notice strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .important-notice p {
+            color: #856404;
+            margin: 0;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .subsection {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul li {
+            position: relative;
+            padding: 5px 0;
+            padding-left: 25px;
+        }
+
+        ul li:before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .warning-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box strong {
+            color: #721c24;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .warning-box p {
+            color: #721c24;
+            margin: 5px 0;
+        }
+
+        .contact-info {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        .contact-info strong {
+            color: #2c3e50;
+        }
+
+        .final-notice {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: center;
+            font-weight: 500;
+            color: #155724;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            .important-notice,
+            .warning-box,
+            .final-notice {
+                border: 2px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h1>
+        <p class="subtitle">(в отношении обработки персональных данных пользователей мобильного приложения и сайта)</p>
+
+        <div class="important-notice">
+            <strong>⚠️ Важное уведомление:</strong>
+            <p>Настоящее приложение не предоставляет услуги VPN-туннелирования через собственные серверы. Приложение выступает в роли клиента-агрегатора, предоставляющего пользователям открытый список сторонних серверов и техническую возможность подключения к ним. Весь интернет-трафик пользователя проходит напрямую через выбранный пользователем сторонний сервер, а не через инфраструктуру Оператора.</p>
+        </div>
+
+        <p>Настоящая политика конфиденциальности (далее — Политика) определяет порядок и условия обработки персональных данных пользователей мобильного приложения и веб-сайта <a href="https://ogonvpn.xyz">https://ogonvpn.xyz</a> (совместно — Сервис) при использовании программного обеспечения, предоставляемого ogonvpn.xyz (далее — Оператор).</p>
+
+        <p>Используя Сервис, Пользователь подтверждает согласие с положениями настоящей Политики. В случае несогласия с какими-либо условиями следует прекратить использование Сервиса.</p>
+
+        <div class="section">
+            <h2>1. Термины и определения</h2>
+            
+            <div class="subsection">
+                <p><strong>1.1. Персональные данные</strong> — любая информация, относящаяся прямо или косвенно к определённому или определяемому Пользователю, предоставляемая при использовании Сервиса.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>1.2. Оператор</strong> — ogonvpn.xyz, разработчик программного обеспечения, осуществляющий обработку персональных данных в рамках, описанных в настоящей Политике.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>1.3. Обработка персональных данных</strong> — любое действие (операция) или совокупность действий с персональными данными, включая сбор, запись, систематизацию, хранение, использование, передачу, обезличивание, блокирование, удаление и уничтожение.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>1.4. Пользователь</strong> — физическое или юридическое лицо, использующее Сервис.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>1.5. Сторонний сервер</strong> — сервер, не принадлежащий и не контролируемый Оператором, к которому Пользователь может подключиться через интерфейс Сервиса.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>1.6. Cookies (cookie-файлы)</strong> — небольшие фрагменты данных, автоматически передаваемые Сервису устройством Пользователя для обеспечения функциональности и улучшения взаимодействия.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. Общие положения</h2>
+            
+            <div class="subsection">
+                <p><strong>2.1.</strong> Политика разработана в соответствии с требованиями Федерального закона № 152-ФЗ «О персональных данных», Федерального закона № 149-ФЗ «Об информации, информационных технологиях и о защите информации» и иных нормативных правовых актов Российской Федерации.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>2.2.</strong> Действие Политики распространяется исключительно на информацию, которую Оператор получает непосредственно при взаимодействии Пользователя с мобильным приложением и веб-сайтом. Политика <span class="highlight">не распространяется</span> на действия владельцев сторонних серверов, к которым подключается Пользователь.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>2.3.</strong> Оператор не является провайдером VPN-услуг в классическом понимании: он не владеет, не управляет и не контролирует серверы, через которые Пользователь направляет свой интернет-трафик.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>2.4.</strong> Продолжая использовать Сервис, Пользователь подтверждает, что понимает и принимает модель работы приложения как клиента для подключения к сторонним серверам.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Состав обрабатываемых данных</h2>
+            
+            <div class="subsection">
+                <p><strong>3.1. Оператор может обрабатывать следующие категории данных:</strong></p>
+                <ul>
+                    <li>Адрес электронной почты (при добровольном указании);</li>
+                    <li>Технические сведения об устройстве: тип и модель устройства, версия операционной системы, язык интерфейса, идентификаторы сессий;</li>
+                    <li>Данные о взаимодействии с интерфейсом приложения (аналитика использования функций);</li>
+                    <li>IP-адрес устройства на момент запуска приложения (для обеспечения базовой сетевой функциональности);</li>
+                    <li>Сведения, сообщаемые при обращении в службу поддержки.</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong> Оператор принципиально не имеет технической возможности собирать, обрабатывать или хранить:</strong>
+                <p>• Содержимое интернет-трафика Пользователя</p>
+                <p>• Историю посещённых сайтов и запросов</p>
+                <p>• Данные, передаваемые через сторонние VPN-серверы</p>
+                <p>• Пароли, ключи шифрования и иную конфиденциальную информацию сессий</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>3.3.</strong> Оператор не ведёт журналы подключений (connection logs) или журналы активности (activity logs) в отношении трафика, проходящего через сторонние серверы.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>3.4.</strong> Возможно использование обезличенных агрегированных данных в аналитических целях для улучшения интерфейса и стабильности работы приложения.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. Цели обработки персональных данных</h2>
+            
+            <div class="subsection">
+                <p><strong>4.1. Персональные данные обрабатываются исключительно для:</strong></p>
+                <ul>
+                    <li>Обеспечения базовой работоспособности мобильного приложения;</li>
+                    <li>Предоставления доступа к открытому списку серверов и функции подключения;</li>
+                    <li>Оказания технической поддержки по вопросам использования интерфейса приложения;</li>
+                    <li>Информирования об обновлениях приложения и изменениях в Политике;</li>
+                    <li>Выполнения требований применимого законодательства.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <p><strong>4.2. Оператор не обрабатывает данные для:</strong></p>
+                <ul>
+                    <li>Мониторинга интернет-активности Пользователя;</li>
+                    <li>Профилирования поведения в сети;</li>
+                    <li>Передачи данных о трафике третьим лицам.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. Правовые основания обработки</h2>
+            
+            <div class="subsection">
+                <p><strong>5.1.</strong> Обработка персональных данных осуществляется на следующих основаниях:</p>
+                <ul>
+                    <li>Согласие Пользователя, выраженное в факте использования Сервиса;</li>
+                    <li>Исполнение условий пользовательского соглашения (публичной оферты);</li>
+                    <li>Законные интересы Оператора в части обеспечения работоспособности и развития программного продукта;</li>
+                    <li>Необходимость соблюдения требований законодательства РФ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>6. Условия обработки и хранения данных</h2>
+            
+            <div class="subsection">
+                <p><strong>6.1.</strong> Персональные данные хранятся в форме, позволяющей идентифицировать субъекта, не дольше, чем этого требуют заявленные цели обработки, если более длительный срок не установлен законодательством.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>6.2.</strong> Обработка осуществляется с применением организационных и технических мер защиты в соответствии с требованиями законодательства РФ.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>6.3. Передача данных третьим лицам допускается только в случаях:</strong></p>
+                <ul>
+                    <li>Когда передача необходима для обеспечения работы приложения (например, сервисам аналитики, хостинг-провайдерам) при условии соблюдения ими конфиденциальности;</li>
+                    <li>При наличии соответствующего требования уполномоченного государственного органа в рамках законодательства;</li>
+                    <li>При предоставлении обезличенных статистических данных партнёрам.</li>
+                </ul>
+            </div>
+
+            <div class="warning-box">
+                <strong>🔒 Важное ограничение:</strong>
+                <p>Оператор не передаёт и не может передать владельцам сторонних серверов персональные данные Пользователя, за исключением IP-адреса, который технически необходим для установления сетевого соединения и который становится видимым серверу в силу архитектуры интернет-протоколов.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>7. Ответственность за сторонние серверы</h2>
+            
+            <div class="subsection">
+                <p><strong>7.1. Пользователь осознаёт и принимает, что при подключении к стороннему серверу:</strong></p>
+                <ul>
+                    <li>Владелец сервера может видеть IP-адрес Пользователя и метаданные соединения;</li>
+                    <li>Политика конфиденциальности Оператора не регулирует действия владельцев сторонних серверов;</li>
+                    <li>Каждый сторонний сервер может иметь собственные правила логгирования и обработки трафика.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <p><strong>7.2. Оператор:</strong></p>
+                <ul>
+                    <li>Не проверяет, не контролирует и не несёт ответственности за политику конфиденциальности, безопасность или законность деятельности владельцев сторонних серверов;</li>
+                    <li>Не гарантирует, что список серверов актуален, безопасен или соответствует заявленным характеристикам;</li>
+                    <li>Не несёт ответственности за утечки данных, перехват трафика или иные инциденты, произошедшие на стороне стороннего сервера.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <p><strong>7.3.</strong> Пользователь самостоятельно несёт ответственность за выбор сервера и понимает риски подключения к непроверенным узлам. Рекомендуется использовать только доверенные серверы и дополнительные средства защиты (шифрование, двухфакторная аутентификация и т.п.).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>8. Права Пользователя (субъекта персональных данных)</h2>
+            
+            <p>Пользователь вправе:</p>
+            <ul>
+                <li>Получать информацию о своих персональных данных, обрабатываемых Оператором;</li>
+                <li>Требовать уточнения, блокирования или удаления своих данных, если они неполные, устаревшие или обрабатываются с нарушением закона;</li>
+                <li>Отозвать согласие на обработку персональных данных (с учётом того, что это может сделать невозможным дальнейшее использование Сервиса);</li>
+                <li>Обжаловать действия (бездействие) Оператора в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке.</li>
+            </ul>
+
+            <p style="margin-top: 15px;">Для реализации прав можно обратиться по адресу:<br>
+            📧 Email: <a href="mailto:support@ogonvpn.xyz">support@ogonvpn.xyz</a></p>
+        </div>
+
+        <div class="section">
+            <h2>9. Cookies и аналитика</h2>
+            
+            <div class="subsection">
+                <p><strong>9.1.</strong> Сервис может использовать cookie-файлы и аналогичные технологии для:</p>
+                <ul>
+                    <li>Обеспечения базовой работоспособности и безопасности приложения;</li>
+                    <li>Сохранения пользовательских настроек интерфейса;</li>
+                    <li>Анализа взаимодействия с приложением для улучшения качества продукта.</li>
+                </ul>
+            </div>
+
+            <div class="subsection">
+                <p><strong>9.2.</strong> Пользователь вправе отключить использование cookie-файлов в настройках браузера или устройства, однако это может ограничить функциональность Сервиса.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>9.3.</strong> Приложение может использовать сторонние сервисы аналитики (например, Firebase, AppMetrica). С политикой конфиденциальности таких сервисов рекомендуется ознакомиться отдельно.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>10. Защита персональных данных</h2>
+            
+            <div class="subsection">
+                <p><strong>10.1.</strong> Оператор применяет правовые, организационные и технические меры для защиты персональных данных от несанкционированного доступа, уничтожения, изменения, блокирования, копирования и распространения.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>10.2.</strong> Доступ к персональным данным предоставлен только уполномоченным сотрудникам Оператора, обязанным соблюдать конфиденциальность.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>10.3.</strong> Учитывая архитектуру приложения, Оператор не имеет доступа к зашифрованному трафику Пользователя после его передачи стороннему серверу, что снижает риски утечки данных со стороны Оператора.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>11. Международная передача данных</h2>
+            
+            <div class="subsection">
+                <p><strong>11.1.</strong> В случаях, когда инфраструктура Оператора (хостинг, аналитика, поддержка) расположена за пределами Российской Федерации, возможна трансграничная передача персональных данных.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>11.2.</strong> Такая передача осуществляется при условии обеспечения надлежащего уровня защиты и соблюдения требований применимого законодательства.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>11.3.</strong> При подключении к сторонним серверам, расположенным в других юрисдикциях, трафик Пользователя может подпадать под законодательство соответствующей страны. Оператор не контролирует и не несёт ответственности за такие юрисдикционные аспекты.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>12. Срок действия и изменения Политики</h2>
+            
+            <div class="subsection">
+                <p><strong>12.1.</strong> Политика действует бессрочно до замены новой редакцией.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>12.2.</strong> Оператор вправе изменять Политику в одностороннем порядке. Актуальная редакция вступает в силу с момента её размещения на сайте <a href="https://ogonvpn.xyz">https://ogonvpn.xyz</a>.</p>
+            </div>
+
+            <div class="subsection">
+                <p><strong>12.3.</strong> Пользователь обязуется самостоятельно отслеживать изменения и знакомиться с текущей редакцией Политики. Продолжение использования Сервиса после публикации изменений означает согласие с новой редакцией.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>13. Контактные данные Оператора</h2>
+            
+            <div class="contact-info">
+                <p>🌐 <strong>Сайт:</strong> <a href="https://ogonvpn.xyz">https://ogonvpn.xyz</a></p>
+                <p>📧 <strong>Email:</strong> <a href="mailto:support@ogonvpn.xyz">support@ogonvpn.xyz</a></p>
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #bdc3c7;">
+                <p><strong>Юридическое лицо:</strong><br>
+                RELOCUP LLC<br>
+                ИНН/Рег. номер: 447009282<br>
+                Адрес: Georgia, Kobuleti Municipality, Tsikhisdziri Village, 10th Street, N 2</p>
+            </div>
+        </div>
+
+        <div class="final-notice">
+            <strong>Заключительное положение:</strong><br>
+            Настоящее приложение предоставляет инструмент для подключения к сторонним серверам. Оператор не осуществляет контроль над интернет-трафиком Пользователя после его передачи выбранному серверу. Пользователь использует Сервис на свой страх и риск и самостоятельно несёт ответственность за соблюдение законодательства при использовании сторонних VPN-серверов.
+        </div>
+    </div>
+</body>
+</html>
