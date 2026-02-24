@@ -464,7 +464,7 @@
         </div>
 
         <div class="section">
-            <h2>13. Контактные данные Оператора</h2>
+            <h2>12. Контактные данные Оператора</h2>
             
             <div class="contact-info">
                 <p>📧 <strong>Email:</strong> <a href="mailto:...@gmail.com">...@gmail.com</a></p>
