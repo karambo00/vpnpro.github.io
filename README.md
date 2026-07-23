@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Политика конфиденциальности VPN Pro - обработка персональных данных пользователей">
-    <title>Политика конфиденциальности | VPN Pro</title>
+    <meta name="description" content="Политика конфиденциальности VPN PRO - обработка персональных данных пользователей">
+    <title>Политика конфиденциальности | VPN PRO</title>
     <style>
         * {
             margin: 0;
@@ -467,7 +467,7 @@
             <h2>12. Контактные данные Оператора</h2>
             
             <div class="contact-info">
-                <p>📧 <strong>Email:</strong> <a href="mailto:...@gmail.com">...@gmail.com</a></p>
+                <p>📧 <strong>Email:</strong> <a href="mailto:privacy@vpnpro.tech">privacy@vpnpro.tech</a></p>
             </div>
         </div>
 
